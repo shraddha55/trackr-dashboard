@@ -1,10 +1,11 @@
 # trackr-dashboard
 
-## How to run trackr dashboard:
+## How to run trackr dashboard
+
 ### git clone the repository
 
 ## Running the server
- cd server
+ cd server \
  npm i 
  npm start
 
