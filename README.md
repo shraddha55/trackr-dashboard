@@ -4,6 +4,12 @@
 
 First, git clone the repository
 
+## Download Postgres
+
+Add creditails to db.js 
+
+## Add node.js
+
 ## Running the server
  cd server \
  npm i \
