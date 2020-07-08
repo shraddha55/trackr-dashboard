@@ -6,7 +6,11 @@ First, git clone the repository
 
 ## Download Postgres
 
-Add creditails to db.js 
+Add credentials to db.js 
+
+## Download node.js
+
+
 
 ## Add node.js
 
