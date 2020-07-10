@@ -4,22 +4,18 @@
 
 First, git clone the repository
 
-## Download Postgres
+### Download Postgres
 
 Add credentials to db.js 
 
-## Download node.js
+### Download node.js
 
-
-
-## Add node.js
-
-## Running the server
+### Running the server
  cd server \
  npm i \
  npm start 
 
-## Running the frontend
+### Running the frontend
  cd client \
  npm i \
  npm start 
