@@ -26,17 +26,29 @@ const pool = new Pool({
 ### Open postgres 
 
 psql -U postgres 
+
+
 Commands: 
+
+
 \l = see all databases 
+
+
 \c <database> = connect to the database 
+	
+	
  \d = see all tables in the database
+ 
+ 
  \d <table_name> = see all columns in table
+ 
+ 
  select * from <table_name>; 
  
  Run these commands: 
  
  
- CREATE DATABASE authtodolist;
+CREATE DATABASE authtodolist;
 
 
 CREATE TABLE users(
