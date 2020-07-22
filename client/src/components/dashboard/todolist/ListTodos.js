@@ -4,6 +4,9 @@ import EditTodo from "./EditTodo";
 const ListTodos = ({ allTodos, setTodosChange }) => {
   console.log(allTodos);
   const [todos, setTodos] = useState([]); //empty array
+  const buttonStyle = {
+    backgroundColor: "#6059F6", border: "none", marginLeft: "595%", color:"white"
+  };
 
   //delete todo function
 
@@ -20,14 +23,6 @@ const ListTodos = ({ allTodos, setTodosChange }) => {
     }
   }
 
-  // async function getTodos() {
-  //   const res = await fetch("http://localhost:5000/todos");
-
-  //   const todoArray = await res.json();
-
-  //   setTodos(todoArray);
-  // }
-
   useEffect(() => {
     setTodos(allTodos);
   }, [allTodos]);
@@ -40,7 +35,12 @@ const ListTodos = ({ allTodos, setTodosChange }) => {
       <table className="table mt-5">
         <thead>
           <tr>
+            <th>Job Title</th>
+            <th>Company Name</th>
+            <th>Location</th>
+            <th>Date Applied</th>
             <th>Description</th>
+            <th>Notes</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -62,7 +62,8 @@ const ListTodos = ({ allTodos, setTodosChange }) => {
                 </td>
                 <td>
                   <button
-                    className="btn btn-danger"
+                    style={buttonStyle}
+                    className="btn"
                     onClick={() => deleteTodo(todo.todo_id)}
                   >
                     Delete
