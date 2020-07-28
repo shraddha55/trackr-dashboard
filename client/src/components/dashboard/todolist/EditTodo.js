@@ -3,6 +3,10 @@ import React, { Fragment, useState } from "react";
 const EditTodo = ({ todo, setTodosChange }) => {
   //editText function
 
+  const buttonStyle = {
+    backgroundColor: "#6059F6", border: "none", color: "white", marginLeft: "420%"
+  };
+
   const editText = async id => {
     try {
       const body = { description };
@@ -31,7 +35,8 @@ const EditTodo = ({ todo, setTodosChange }) => {
     <Fragment>
       <button
         type="button"
-        className="btn btn-warning"
+        className="btn"
+        style={buttonStyle}
         data-toggle="modal"
         data-target={`#id${todo.todo_id}`}
       >
@@ -68,16 +73,18 @@ const EditTodo = ({ todo, setTodosChange }) => {
 
             <div className="modal-footer">
               <button
+                style={buttonStyle}
                 type="button"
-                className="btn btn-warning"
+                className="btn"
                 data-dismiss="modal"
                 onClick={() => editText(todo.todo_id)}
               >
                 Edit
               </button>
               <button
+                style={buttonStyle}
                 type="button"
-                className="btn btn-danger"
+                className="btn"
                 data-dismiss="modal"
                 onClick={() => setDescription(todo.description)}
               >

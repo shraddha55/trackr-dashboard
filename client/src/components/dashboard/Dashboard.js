@@ -11,6 +11,10 @@ const Dashboard = ({ setAuth }) => {
   const [allTodos, setAllTodos] = useState([]);
   const [todosChange, setTodosChange] = useState(false);
 
+  const buttonStyle = {
+    backgroundColor: "#6059F6", padding: "10px", border: "none", marginLeft: "95%"
+  };
+
   const getProfile = async () => {
     try {
       const res = await fetch("http://localhost:5000/dashboard/", {
@@ -46,9 +50,8 @@ const Dashboard = ({ setAuth }) => {
 
   return (
     <div>
-      <div className="d-flex mt-5 justify-content-around">
-        <h2>{name} 's Todo List</h2>
-        <button onClick={e => logout(e)} className="btn btn-primary">
+      <div className=" mt-5 ">
+        <button style={buttonStyle} onClick={e => logout(e)} className="btn btn-primary">
           Logout
         </button>
       </div>

@@ -2,6 +2,9 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import { Component } from "react"
+
+
 const Register = ({ setAuth }) => {
   const [inputs, setInputs] = useState({
     email: "",
@@ -10,6 +13,15 @@ const Register = ({ setAuth }) => {
   });
 
   const { email, password, name } = inputs;
+
+  const buttonStyle = {
+    backgroundColor: "#6059F6", padding: "10px", border: "none", marginLeft: "47%"
+   };
+
+   const inputStyle = {
+     width: "20%",
+     marginLeft: "40%"
+   };
 
   const onChange = e =>
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -45,9 +57,10 @@ const Register = ({ setAuth }) => {
 
   return (
     <Fragment>
-      <h1 className="mt-5 text-center">Register</h1>
+      <h1 style={{fontFamily:"Avenir"}} className="mt-5 text-center">Trackr Register</h1>
       <form onSubmit={onSubmitForm}>
         <input
+          style={inputStyle}
           type="text"
           name="email"
           value={email}
@@ -56,6 +69,7 @@ const Register = ({ setAuth }) => {
           className="form-control my-3"
         />
         <input
+          style={inputStyle}
           type="password"
           name="password"
           value={password}
@@ -64,6 +78,7 @@ const Register = ({ setAuth }) => {
           className="form-control my-3"
         />
         <input
+          style={inputStyle}
           type="text"
           name="name"
           value={name}
@@ -71,11 +86,11 @@ const Register = ({ setAuth }) => {
           onChange={e => onChange(e)}
           className="form-control my-3"
         />
-        <button className="btn btn-success btn-block">Submit</button>
+        <button style={buttonStyle} className="btn btn-success">Submit</button>
       </form>
-      <Link to="/login">login</Link>
+      <Link to="/login" style={{marginLeft: "42%", marginTop: "10%"}}>Already a User? Login</Link>
     </Fragment>
   );
-};
+}; // end of register
 
 export default Register;

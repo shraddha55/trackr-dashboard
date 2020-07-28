@@ -10,6 +10,13 @@ const Login = ({ setAuth }) => {
   });
 
   const { email, password } = inputs;
+  const buttonStyle = {
+    backgroundColor: "#6059F6", padding: "10px", border: "none"
+   };
+   const inputStyle = {
+     width: "20%",
+     marginLeft: "40%"
+   };
 
   const onChange = e =>
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -46,9 +53,10 @@ const Login = ({ setAuth }) => {
 
   return (
     <Fragment>
-      <h1 className="mt-5 text-center">Login</h1>
-      <form onSubmit={onSubmitForm}>
+      <h1 className="mt-5 text-center">TRACKR LOGIN</h1>
+      <form className="mt-5 text-center" style={{textAlign: "center"}} onSubmit={onSubmitForm}>
         <input
+          style={inputStyle}
           type="text"
           name="email"
           value={email}
@@ -56,15 +64,17 @@ const Login = ({ setAuth }) => {
           className="form-control my-3"
         />
         <input
+        style={{textAlign: "center"}}
+          style={inputStyle}
           type="password"
           name="password"
           value={password}
           onChange={e => onChange(e)}
           className="form-control my-3"
         />
-        <button className="btn btn-success btn-block">Submit</button>
+        <button style={buttonStyle} className="btn btn-success">Submit</button>
       </form>
-      <Link to="/register">register</Link>
+      <Link to="/register" style={{marginLeft: "40%", marginTop: "10%"}}> Here for the first time? Register</Link>
     </Fragment>
   );
 };

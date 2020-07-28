@@ -1,6 +1,14 @@
 import React, { Fragment, useState } from "react";
 
 const InputTodo = ({ setTodosChange }) => {
+
+  const buttonStyle = {
+    backgroundColor: "#6059F6", border: "none", width: "10%"
+  };
+
+  const inputStyle = {
+    width: "20%", marginLeft: "3%"
+  };
   const [description, setDescription] = useState("");
 
   const onSubmitForm = async e => {
@@ -31,16 +39,17 @@ const InputTodo = ({ setTodosChange }) => {
   };
   return (
     <Fragment>
-      <h1 className="text-center my-5">Input Todo</h1>
-      <form className="d-flex" onSubmit={onSubmitForm}>
+      <h1 className="text-center my-5">Job Tracker</h1>
+      <form style={{justifyContent: "center"}}  className="d-flex" onSubmit={onSubmitForm}>
         <input
+          style={inputStyle}
           type="text"
           placeholder="add todo"
           className="form-control"
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
-        <button className="btn btn-success ">Add</button>
+        <button style={buttonStyle} className="btn btn-success ">Add</button>
       </form>
     </Fragment>
   );
