@@ -12,7 +12,7 @@ const Landing = () => {
 
   return (
     <div className="jumbotron mt-5" style={jumbotronStyle}>
-      <h1>Welcome To Trackr</h1>
+      <h1>WELCOME TO TRACKR</h1>
       <p>Join us in the first step to finding your dream job</p>
       <Link to="/login" className="btn" style={buttonStyle}>
         Login

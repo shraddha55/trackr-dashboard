@@ -53,7 +53,7 @@ const Login = ({ setAuth }) => {
 
   return (
     <Fragment>
-      <h1 className="mt-5 text-center">Trackr Login</h1>
+      <h1 className="mt-5 text-center">TRACKR LOGIN</h1>
       <form className="mt-5 text-center" style={{textAlign: "center"}} onSubmit={onSubmitForm}>
         <input
           style={inputStyle}
